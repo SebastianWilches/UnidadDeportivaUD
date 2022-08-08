@@ -19,11 +19,11 @@ public class Deporte_Tipoelemento {
     @Id
     @ManyToOne
     @JoinColumn(name= "IDTIPOELEMENTO_FKDEPORTE_TIPOE")
-    private TipoElemento IDTIPOELEMENTO_FKDEPORTE_TIPOE;
+    private TipoElemento tipoElemento;
     @Id
     @ManyToOne
     @JoinColumn(name="IDDEPORTE_FKDEPORTE_TIPOELEMEN")
-    private Deporte IDDEPORTE_FKDEPORTE_TIPOELEMEN;
+    private Deporte deporte;
 
 
 }

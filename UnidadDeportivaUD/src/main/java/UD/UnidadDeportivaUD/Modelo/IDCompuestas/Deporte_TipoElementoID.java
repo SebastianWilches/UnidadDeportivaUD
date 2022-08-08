@@ -12,8 +12,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Deporte_TipoElementoID implements Serializable {
 
-    private TipoElemento IDTIPOELEMENTO_FKDEPORTE_TIPOE;
-    private Deporte IDDEPORTE_FKDEPORTE_TIPOELEMEN;
+    private TipoElemento tipoElemento;
+    private Deporte deporte;
 
 
 }

@@ -19,19 +19,19 @@ public class ElemenDeportivo {
 
     @ManyToOne
     @JoinColumn(name="IDTIPOELEMENTO_FKELEMENDEPORTI")
-    private TipoElemento IDTIPOELEMENTO_FKELEMENDEPORTI;
+    private TipoElemento tipoElemento;
 
     @ManyToOne
     @JoinColumn(name="IDESTADO_FKELEMENDEPORTIVO")
-    private Estado IDESTADO_FKELEMENDEPORTIVO;
+    private Estado estado;
 
     @ManyToOne
     @JoinColumn(name="CODESPACIO_FKELEMENDEPORTIVO")
-    private Espacio CODESPACIO_FKELEMENDEPORTIVO;
+    private Espacio espacio;
 
     @ManyToOne
     @JoinColumn(name="IDMARCA_FKELEMENDEPORTIVO")
-    private Marca IDMARCA_FKELEMENDEPORTIVO;
+    private Marca marca;
 
     @Column(name="FECHAREGISTRO")
     private Date FECHAREGISTRO;
