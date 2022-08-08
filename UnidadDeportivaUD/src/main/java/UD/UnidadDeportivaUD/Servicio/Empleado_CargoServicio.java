@@ -18,7 +18,5 @@ public class Empleado_CargoServicio {
         return empleado_cargoRepositorio.findAll();
     }
 
-    public Empleado_Cargo getEmpleado_CargoTest(Long id){
-        return empleado_cargoRepositorio.findById(id).get();
-    }
+
 }
