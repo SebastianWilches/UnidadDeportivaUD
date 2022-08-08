@@ -24,7 +24,7 @@ public class Empleado {
     private String NOMEMPLEADO;
     @Column(name="APELLEMPLEADO")
     private String APELLEMPLEADO;
-    @Column(name="APELLEMPLEADO")
+    @Column(name="FECHAREGISTRO")
     private Date FECHAREGISTRO;
     @Column(name="CORREOUD")
     private String CORREOUD;
