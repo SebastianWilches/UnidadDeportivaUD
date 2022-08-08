@@ -379,4 +379,11 @@ INSERT INTO ElemenDeportivo VALUES (9, '9', '2', '3', '10', sysdate);
 INSERT INTO ElemenDeportivo VALUES (10, '10', '2', '3', '10', sysdate);
 
 
+
+
+
+
+--Tabla de responsable
+INSERT INTO RESPONSABLE VALUES (1,1,'2','3','1','03/05/2022','04/05/2022');
+
 commit;

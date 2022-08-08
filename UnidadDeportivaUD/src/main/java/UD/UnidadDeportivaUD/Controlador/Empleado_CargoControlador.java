@@ -29,15 +29,7 @@ public class Empleado_CargoControlador {
         return ResponseEntity.ok(empleado_cargoService.obtenerTodosEmpleadoCargo());
     }
 
-    @GetMapping("/validarAuxiliar/{CODEMPLEADO}")
-    public ResponseEntity<Empleado_Cargo> isAuxiliar(@PathVariable String CODEMPLEADO) {
 
-        if (!empleadoServicio.getEmpleado(CODEMPLEADO).isEmpty()) {
-            return ResponseEntity.ok(empleado_cargoService.validarAuxiliar(empleadoServicio.getEmpleado(CODEMPLEADO).get()));
-        }else{
-            return null;
-        }
-    }
 
 
 
