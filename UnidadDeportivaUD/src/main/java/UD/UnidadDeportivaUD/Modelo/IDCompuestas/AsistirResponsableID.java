@@ -6,17 +6,16 @@ import UD.UnidadDeportivaUD.Modelo.Responsable;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Embeddable
 public class AsistirResponsableID implements Serializable {
 
-    /*@EmbeddedId
-    private AsistirResponsableFK asistirResponsableFK;*/
-    private Programacion programacion;
-    private Responsable responsable;
-    private Long asistirresponsable;
+    private AsistirResponsableFK asistirResponsableFK;
+    private Long CONSECASISRES;
 
 }

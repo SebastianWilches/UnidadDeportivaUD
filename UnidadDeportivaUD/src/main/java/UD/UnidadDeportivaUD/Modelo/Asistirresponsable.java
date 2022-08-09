@@ -12,24 +12,28 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "ASISTIRRESPONSABLE")
+//@Table(name = "ASISTIRRESPONSABLE")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@IdClass(AsistirResponsableID.class)
+//@IdClass(AsistirResponsableID.class)
 public class Asistirresponsable {
 
-    /*
-    @Id
+
+
+    /*@Id
+    @JoinTable(
+            name="AsistirResponsableJoin",
     @JoinColumns({
             @JoinColumn(name = "programacion", referencedColumnName = "CONSECPROGRA_FKASISTIRRESPONSA"),
             @JoinColumn(name = "responsable", referencedColumnName = "CONSECRES_FKASISTIRRESPONSABLE"),
             @JoinColumn(name="asistirresponsable", referencedColumnName = "CONSECASISRE")
-    })
+    }))
     private AsistirResponsableID asistirResponsableID;*/
 
 
 
+/*
     @Id
     @ManyToOne
     @JoinColumn(name="CONSECPROGRA_FKASISTIRRESPONSA")
@@ -40,7 +44,21 @@ public class Asistirresponsable {
     private Responsable responsable;
     @Id
     @Column(name="CONSECASISRE")
-    private Long asistirresponsable;
+    private Long asistirresponsable;*/
+    @EmbeddedId
+    private AsistirResponsableID asistirResponsableID;
+
+
+    @MapsId("consecres")
+    @JoinColumns({
+            @JoinColumn(name="programacion", referencedColumnName="CONSECPROGRA_FKASISTIRRESPONSA"),
+            @JoinColumn(name="responsable", referencedColumnName="CONSECRES_FKASISTIRRESPONSABLE")
+    })
+    @ManyToOne
+    public AsistirResponsableFK asistirResponsableFK;
+
+
+
     @Column(name="FECHAASISRES")
     private Date FECHAASISRES;
     @Column(name="HORAASISRES")

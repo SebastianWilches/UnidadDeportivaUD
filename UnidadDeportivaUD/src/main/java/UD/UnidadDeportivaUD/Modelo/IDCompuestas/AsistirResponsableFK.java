@@ -6,11 +6,18 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class AsistirResponsableFK {
+@Embeddable
+@Entity
+public class AsistirResponsableFK implements Serializable {
 
+    @Id
     @Column (name="CONSECPROGRA_FKASISTIRRESPONSA")
     private Programacion programacion;
     @Column(name="CONSECRES_FKASISTIRRESPONSABLE")
