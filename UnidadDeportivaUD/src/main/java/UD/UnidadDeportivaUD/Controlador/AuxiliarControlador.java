@@ -27,6 +27,9 @@ public class AuxiliarControlador {
     @Autowired
     private ElemendeportivoServicio elemendeportivoServicio;
 
+    @Autowired
+    private EstadoServicio estadoServicio;
+
     @GetMapping("/validarAuxiliar/{CODEMPLEADO}")
     public ResponseEntity<Empleado_Cargo> isAuxiliar(@PathVariable String CODEMPLEADO) {
 
@@ -83,5 +86,25 @@ public class AuxiliarControlador {
             return null;
         }
     }
+
+
+    @PutMapping("/cambiarEstadoElementosDeportivos/{CONSECELEMENTO}")
+    public ResponseEntity<ElemenDeportivo> actualizarEstadoElementoDeportivo(@PathVariable Long CONSECELEMENTO){
+        //Obtenemos los elementos deportivos
+        ElemenDeportivo elemenDeportivo = elemendeportivoServicio.getElemenDeportivo(CONSECELEMENTO).get();
+
+        //Cambiamos el estado
+        Estado estado = elemenDeportivo.getEstado();
+
+        if(estado.getDESCESTADO().equals("1")){
+            elemenDeportivo.setEstado(estadoServicio.getEstadoById("2"));
+            return ResponseEntity.ok(elemenDeportivo);
+        }else{
+            elemenDeportivo.setEstado(estadoServicio.getEstadoById("1"));
+            return ResponseEntity.ok(elemenDeportivo);
+        }
+    }
+
+
 
 }

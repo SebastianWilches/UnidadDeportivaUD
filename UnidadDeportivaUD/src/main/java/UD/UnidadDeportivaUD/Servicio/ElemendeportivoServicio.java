@@ -22,4 +22,9 @@ public class ElemendeportivoServicio {
             return null;
         }
     }
+
+
+    public Optional<ElemenDeportivo> getElemenDeportivo(Long CONSECELEMENTO){
+        return elemenDeportivoRepositorio.findById(CONSECELEMENTO);
+    }
 }

@@ -334,22 +334,22 @@ INSERT INTO Dia VALUES ('7','Domingo');
 
 --PROGRAMACIoN
 --4 CURSOS
-INSERT INTO Programacion VALUES (1, '5', '6', '20221', 'CU', '06', '08', '1', 30, NULL); 
-INSERT INTO Programacion VALUES (2, '20', '4', '20221', 'CU', '08', '10', '1', 30, NULL);
-INSERT INTO Programacion VALUES (3, '5', '5', '20221', 'CU', '10', '12', '1', 30, NULL); 
-INSERT INTO Programacion VALUES (4, '8', '3', '20221', 'CU', '12', '14', '1', 30, NULL); 
+INSERT INTO Programacion VALUES (1, '5', '6', '20221', 'CU', '06', '08', '1', 30, 15); 
+INSERT INTO Programacion VALUES (2, '20', '4', '20221', 'CU', '08', '10', '1', 30, 12);
+INSERT INTO Programacion VALUES (3, '5', '5', '20221', 'CU', '10', '12', '1', 30, 3); 
+INSERT INTO Programacion VALUES (4, '8', '3', '20221', 'CU', '12', '14', '1', 30, 29); 
 
 --4 Equipos de entrenamiento
-INSERT INTO Programacion VALUES (5, '5', '7', '20221', 'EN', '06', '08', '2', 30, NULL);
-INSERT INTO Programacion VALUES (6, '5', '7', '20221', 'EN', '08', '10', '2', 30, NULL);
-INSERT INTO Programacion VALUES (7, '5', '7', '20221', 'EN', '10', '12', '2', 30, NULL);
-INSERT INTO Programacion VALUES (8, '5', '7', '20221', 'EN', '12', '14', '2', 30, NULL);
+INSERT INTO Programacion VALUES (5, '5', '7', '20221', 'EN', '06', '08', '2', 30, 22);
+INSERT INTO Programacion VALUES (6, '5', '7', '20221', 'EN', '08', '10', '2', 30, 21);
+INSERT INTO Programacion VALUES (7, '5', '7', '20221', 'EN', '10', '12', '2', 30, 19);
+INSERT INTO Programacion VALUES (8, '5', '7', '20221', 'EN', '12', '14', '2', 30, 7);
 
 --4 practicas libre
-INSERT INTO Programacion VALUES (9, '6', '1', '20221', 'PR', '06', '08', '3', 30, NULL);
-INSERT INTO Programacion VALUES (10, '6', '1', '20221', 'PR', '08', '10', '3', 30, NULL);
-INSERT INTO Programacion VALUES (11, '6', '1', '20221', 'PR', '10', '12', '3', 30, NULL);
-INSERT INTO Programacion VALUES (12, '6', '1', '20221', 'PR', '12', '14', '3', 30, NULL);
+INSERT INTO Programacion VALUES (9, '6', '1', '20221', 'PR', '06', '08', '3', 30, 2);
+INSERT INTO Programacion VALUES (10, '6', '1', '20221', 'PR', '08', '10', '3', 30, 8);
+INSERT INTO Programacion VALUES (11, '6', '1', '20221', 'PR', '10', '12', '3', 30, 7);
+INSERT INTO Programacion VALUES (12, '6', '1', '20221', 'PR', '12', '14', '3', 30, 6);
 
 
 
@@ -385,5 +385,12 @@ INSERT INTO ElemenDeportivo VALUES (10, '10', '2', '3', '10', sysdate);
 
 --Tabla de responsable
 INSERT INTO RESPONSABLE VALUES (1,1,'2','3','1','03/05/2022','04/05/2022');
+--Tabla deporte_TipoElemento
+
+INSERT INTO deporte_tipoelemento VALUES ('2','6');
+INSERT INTO deporte_tipoelemento VALUES ('3','5');
+INSERT INTO deporte_tipoelemento VALUES ('4','3');
+INSERT INTO deporte_tipoelemento VALUES ('6','9');
+INSERT INTO deporte_tipoelemento VALUES ('8','10');
 
 commit;
